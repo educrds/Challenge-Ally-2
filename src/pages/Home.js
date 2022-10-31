@@ -33,9 +33,7 @@ const Home = () => {
     fetch(urlCountry)
       .then((res) => res.json())
       .then(
-        (result) => {
-          setCountries(result);
-        },
+        (result) => setCountries(result),
         () => {
           alert("Houve um erro, tente novamente!");
         }
@@ -47,9 +45,7 @@ const Home = () => {
     fetch(urlCity)
       .then((res) => res.json())
       .then(
-        (result) => {
-          setCities(result);
-        },
+        (result) => setCities(result),
         () => {
           alert("Houve um erro, tente novamente!");
         }
