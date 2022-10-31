@@ -25,9 +25,7 @@ const Sign = () => {
     formState: { errors },
   } = useForm();
 
-  const onClick = () => {
-    navigate("/home");
-  };
+  const onClick = () => navigate("/home");
 
   function Input(props) {
     return (

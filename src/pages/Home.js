@@ -34,9 +34,7 @@ const Home = () => {
       .then((res) => res.json())
       .then(
         (result) => setCountries(result),
-        () => {
-          alert("Houve um erro, tente novamente!");
-        }
+        () => alert("Houve um erro, tente novamente!")
       );
   }, []);
 
@@ -46,19 +44,12 @@ const Home = () => {
       .then((res) => res.json())
       .then(
         (result) => setCities(result),
-        () => {
-          alert("Houve um erro, tente novamente!");
-        }
+        () => alert("Houve um erro, tente novamente!")
       );
   }, []);
 
-  const handleCountryChange = (event) => {
-    setSelectedCountry(event.target.value);
-  };
-
-  const handleCityChange = (event) => {
-    setSelectedCity(event.target.value);
-  };
+  const handleCityChange = (event) => setSelectedCity(event.target.value);
+  const handleCountryChange = (event) => setSelectedCountry(event.target.value);
 
   return (
     <ThemeProvider theme={theme}>
